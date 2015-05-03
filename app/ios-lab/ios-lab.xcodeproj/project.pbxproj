@@ -14,6 +14,9 @@
 		5A9339271AF656A2007DAA3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9339261AF656A2007DAA3F /* Images.xcassets */; };
 		5A93392A1AF656A2007DAA3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9339281AF656A2007DAA3F /* LaunchScreen.xib */; };
 		5A9339361AF656A2007DAA3F /* ios_labTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9339351AF656A2007DAA3F /* ios_labTests.m */; };
+		5A9339421AF66372007DAA3F /* ILImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9339411AF66372007DAA3F /* ILImageFile.m */; };
+		5A9339451AF66385007DAA3F /* ILDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9339441AF66385007DAA3F /* ILDirectory.m */; };
+		5A9339481AF66397007DAA3F /* ILFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9339471AF66397007DAA3F /* ILFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		5A93392F1AF656A2007DAA3F /* ios-labTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-labTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9339341AF656A2007DAA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9339351AF656A2007DAA3F /* ios_labTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_labTests.m; sourceTree = "<group>"; };
+		5A9339401AF66372007DAA3F /* ILImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILImageFile.h; sourceTree = "<group>"; };
+		5A9339411AF66372007DAA3F /* ILImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILImageFile.m; sourceTree = "<group>"; };
+		5A9339431AF66385007DAA3F /* ILDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILDirectory.h; sourceTree = "<group>"; };
+		5A9339441AF66385007DAA3F /* ILDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILDirectory.m; sourceTree = "<group>"; };
+		5A9339461AF66397007DAA3F /* ILFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILFileManager.h; sourceTree = "<group>"; };
+		5A9339471AF66397007DAA3F /* ILFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		5A9339151AF656A2007DAA3F /* ios-lab */ = {
 			isa = PBXGroup;
 			children = (
+				5A93393F1AF66352007DAA3F /* Model */,
 				5A93391A1AF656A2007DAA3F /* AppDelegate.h */,
 				5A93391B1AF656A2007DAA3F /* AppDelegate.m */,
 				5A9339201AF656A2007DAA3F /* ViewController.h */,
@@ -117,6 +127,19 @@
 				5A9339341AF656A2007DAA3F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A93393F1AF66352007DAA3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A9339401AF66372007DAA3F /* ILImageFile.h */,
+				5A9339411AF66372007DAA3F /* ILImageFile.m */,
+				5A9339431AF66385007DAA3F /* ILDirectory.h */,
+				5A9339441AF66385007DAA3F /* ILDirectory.m */,
+				5A9339461AF66397007DAA3F /* ILFileManager.h */,
+				5A9339471AF66397007DAA3F /* ILFileManager.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9339451AF66385007DAA3F /* ILDirectory.m in Sources */,
 				5A93391C1AF656A2007DAA3F /* AppDelegate.m in Sources */,
+				5A9339421AF66372007DAA3F /* ILImageFile.m in Sources */,
+				5A9339481AF66397007DAA3F /* ILFileManager.m in Sources */,
 				5A93391F1AF656A2007DAA3F /* ios_lab.xcdatamodeld in Sources */,
 				5A9339221AF656A2007DAA3F /* ViewController.m in Sources */,
 				5A9339191AF656A2007DAA3F /* main.m in Sources */,
