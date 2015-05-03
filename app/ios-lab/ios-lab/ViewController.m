@@ -19,11 +19,27 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor redColor];
+    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// Source: http://www.raywenderlich.com/1948/itunes-tutorial-for-ios-how-to-integrate-itunes-file-sharing-with-your-ios-app
+- (void)readFiles {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *publicDocumentsDir = [paths objectAtIndex:0];
+    
+    NSError *error;
+    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:publicDocumentsDir error:&error];
+    if (files == nil) {
+        NSLog(@"Error reading contents of documents directory: %@", [error localizedDescription]);
+    }
+    
+    for (NSString *file in files) {
+        if ([file.pathExtension compare:@"sbz" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
+            NSString *fullPath = [publicDocumentsDir stringByAppendingPathComponent:file];
+            //            [retval addObject:fullPath];
+        }
+    }
 }
 
 @end
