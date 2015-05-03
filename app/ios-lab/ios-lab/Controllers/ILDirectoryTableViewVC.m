@@ -94,8 +94,12 @@
     cell.textLabel.text = [treeItem nameWithExtension:YES];
     
     if ([treeItem isDirectory]) {
+        cell.imageView.image = nil;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
+        ILImageFile *imgFile = (ILImageFile *)treeItem;
+        cell.imageView.image = [UIImage imageWithContentsOfFile:imgFile.path];
+        cell.imageView.backgroundColor = [UIColor redColor];
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
