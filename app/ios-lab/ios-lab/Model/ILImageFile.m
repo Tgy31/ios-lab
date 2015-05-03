@@ -13,8 +13,6 @@
 
 @interface ILImageFile()
 
-@property (strong, nonatomic, readwrite) NSString *name;
-@property (strong, nonatomic, readwrite) NSString *path;
 @property (strong, nonatomic, readwrite) UIImage *image;
 
 @end
@@ -42,9 +40,8 @@
     return _image;
 }
 
-- (void)setPath:(NSString *)path {
-    _path = path;
-    self.name = [self extractNameFromPath:path];
+- (BOOL)isImage {
+    return YES;
 }
 
 #pragma mark - Helpers
@@ -52,10 +49,6 @@
 + (BOOL)isImageFile:(NSString *)path {
     UIImage *img = [UIImage imageWithContentsOfFile:path];
     return img != nil;
-}
-
-- (NSString *)extractNameFromPath:(NSString *)path {
-    return [path lastPathComponent];
 }
 
 @end

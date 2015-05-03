@@ -10,6 +10,10 @@
 
 // Controllers
 #import "ViewController.h"
+#import "ILDirectoryNavigationController.h"
+
+// Managers
+#import "ILFileManager.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +26,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [ViewController new];
+    [ILFileManager readSharedDirectory];
+    self.window.rootViewController = [ILDirectoryNavigationController newWithRootDirectory:[ILFileManager rootDirectory]];
     
     return YES;
 }

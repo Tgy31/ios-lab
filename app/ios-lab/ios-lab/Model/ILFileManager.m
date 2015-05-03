@@ -10,6 +10,12 @@
 
 static ILFileManager *sharedManager;
 
+@interface ILFileManager()
+
+@property (strong, nonatomic) ILDirectory *rootDirectory;
+
+@end
+
 @implementation ILFileManager
 
 #pragma mark - Singleton
@@ -23,15 +29,19 @@ static ILFileManager *sharedManager;
     return [[ILFileManager sharedManager] readSharedDirectory];
 }
 
++ (ILDirectory *)rootDirectory {
+    return [[ILFileManager sharedManager] rootDirectory];
+}
+
 #pragma mark - Methods
 
 - (ILDirectory *)readSharedDirectory {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *publicDocumentsDir = [paths objectAtIndex:0];
     
-    ILDirectory *rootDirectory = [ILDirectory directoryFromPath:publicDocumentsDir];
+    self.rootDirectory = [ILDirectory directoryFromPath:publicDocumentsDir];
     
-    return rootDirectory;
+    return self.rootDirectory;
 }
 
 @end

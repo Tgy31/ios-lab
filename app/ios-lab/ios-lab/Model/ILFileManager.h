@@ -13,6 +13,7 @@
 
 @interface ILFileManager : NSObject
 
++ (ILDirectory *)rootDirectory;
 + (ILDirectory *)readSharedDirectory;
 
 @end

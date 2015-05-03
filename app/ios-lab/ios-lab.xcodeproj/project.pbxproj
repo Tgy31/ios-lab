@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A05E35A1AF66BB400D48D3D /* ILDirectoryNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E3581AF66BB400D48D3D /* ILDirectoryNavigationController.m */; };
+		5A05E35B1AF66BB400D48D3D /* ILDirectoryNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A05E3591AF66BB400D48D3D /* ILDirectoryNavigationController.xib */; };
+		5A05E35F1AF66CDB00D48D3D /* ILDirectoryTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E35D1AF66CDB00D48D3D /* ILDirectoryTableViewVC.m */; };
+		5A05E3601AF66CDB00D48D3D /* ILDirectoryTableViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A05E35E1AF66CDB00D48D3D /* ILDirectoryTableViewVC.xib */; };
+		5A05E3631AF66F0800D48D3D /* ILTreeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E3621AF66F0800D48D3D /* ILTreeItem.m */; };
+		5A05E3671AF6736500D48D3D /* ILImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E3651AF6736500D48D3D /* ILImageVC.m */; };
+		5A05E3681AF6736500D48D3D /* ILImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A05E3661AF6736500D48D3D /* ILImageVC.xib */; };
 		5A9339191AF656A2007DAA3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9339181AF656A2007DAA3F /* main.m */; };
 		5A93391C1AF656A2007DAA3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A93391B1AF656A2007DAA3F /* AppDelegate.m */; };
 		5A93391F1AF656A2007DAA3F /* ios_lab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A93391D1AF656A2007DAA3F /* ios_lab.xcdatamodeld */; };
@@ -30,6 +37,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A05E3571AF66BB400D48D3D /* ILDirectoryNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILDirectoryNavigationController.h; sourceTree = "<group>"; };
+		5A05E3581AF66BB400D48D3D /* ILDirectoryNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILDirectoryNavigationController.m; sourceTree = "<group>"; };
+		5A05E3591AF66BB400D48D3D /* ILDirectoryNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILDirectoryNavigationController.xib; sourceTree = "<group>"; };
+		5A05E35C1AF66CDB00D48D3D /* ILDirectoryTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILDirectoryTableViewVC.h; sourceTree = "<group>"; };
+		5A05E35D1AF66CDB00D48D3D /* ILDirectoryTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILDirectoryTableViewVC.m; sourceTree = "<group>"; };
+		5A05E35E1AF66CDB00D48D3D /* ILDirectoryTableViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILDirectoryTableViewVC.xib; sourceTree = "<group>"; };
+		5A05E3611AF66F0800D48D3D /* ILTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTreeItem.h; sourceTree = "<group>"; };
+		5A05E3621AF66F0800D48D3D /* ILTreeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTreeItem.m; sourceTree = "<group>"; };
+		5A05E3641AF6736500D48D3D /* ILImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILImageVC.h; sourceTree = "<group>"; };
+		5A05E3651AF6736500D48D3D /* ILImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILImageVC.m; sourceTree = "<group>"; };
+		5A05E3661AF6736500D48D3D /* ILImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILImageVC.xib; sourceTree = "<group>"; };
 		5A9339131AF656A2007DAA3F /* ios-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9339171AF656A2007DAA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9339181AF656A2007DAA3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A05E3561AF66B8700D48D3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A05E3571AF66BB400D48D3D /* ILDirectoryNavigationController.h */,
+				5A05E3581AF66BB400D48D3D /* ILDirectoryNavigationController.m */,
+				5A05E3591AF66BB400D48D3D /* ILDirectoryNavigationController.xib */,
+				5A05E35C1AF66CDB00D48D3D /* ILDirectoryTableViewVC.h */,
+				5A05E35D1AF66CDB00D48D3D /* ILDirectoryTableViewVC.m */,
+				5A05E35E1AF66CDB00D48D3D /* ILDirectoryTableViewVC.xib */,
+				5A05E3641AF6736500D48D3D /* ILImageVC.h */,
+				5A05E3651AF6736500D48D3D /* ILImageVC.m */,
+				5A05E3661AF6736500D48D3D /* ILImageVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5A93390A1AF656A2007DAA3F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +127,7 @@
 				5A93393F1AF66352007DAA3F /* Model */,
 				5A93391A1AF656A2007DAA3F /* AppDelegate.h */,
 				5A93391B1AF656A2007DAA3F /* AppDelegate.m */,
+				5A05E3561AF66B8700D48D3D /* Controllers */,
 				5A9339201AF656A2007DAA3F /* ViewController.h */,
 				5A9339211AF656A2007DAA3F /* ViewController.m */,
 				5A9339261AF656A2007DAA3F /* Images.xcassets */,
@@ -136,6 +171,8 @@
 				5A9339411AF66372007DAA3F /* ILImageFile.m */,
 				5A9339431AF66385007DAA3F /* ILDirectory.h */,
 				5A9339441AF66385007DAA3F /* ILDirectory.m */,
+				5A05E3611AF66F0800D48D3D /* ILTreeItem.h */,
+				5A05E3621AF66F0800D48D3D /* ILTreeItem.m */,
 				5A9339461AF66397007DAA3F /* ILFileManager.h */,
 				5A9339471AF66397007DAA3F /* ILFileManager.m */,
 			);
@@ -223,7 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A93392A1AF656A2007DAA3F /* LaunchScreen.xib in Resources */,
+				5A05E3601AF66CDB00D48D3D /* ILDirectoryTableViewVC.xib in Resources */,
 				5A9339271AF656A2007DAA3F /* Images.xcassets in Resources */,
+				5A05E35B1AF66BB400D48D3D /* ILDirectoryNavigationController.xib in Resources */,
+				5A05E3681AF6736500D48D3D /* ILImageVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +284,14 @@
 				5A9339451AF66385007DAA3F /* ILDirectory.m in Sources */,
 				5A93391C1AF656A2007DAA3F /* AppDelegate.m in Sources */,
 				5A9339421AF66372007DAA3F /* ILImageFile.m in Sources */,
+				5A05E3631AF66F0800D48D3D /* ILTreeItem.m in Sources */,
 				5A9339481AF66397007DAA3F /* ILFileManager.m in Sources */,
+				5A05E3671AF6736500D48D3D /* ILImageVC.m in Sources */,
 				5A93391F1AF656A2007DAA3F /* ios_lab.xcdatamodeld in Sources */,
 				5A9339221AF656A2007DAA3F /* ViewController.m in Sources */,
 				5A9339191AF656A2007DAA3F /* main.m in Sources */,
+				5A05E35A1AF66BB400D48D3D /* ILDirectoryNavigationController.m in Sources */,
+				5A05E35F1AF66CDB00D48D3D /* ILDirectoryTableViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +478,7 @@
 				5A93393B1AF656A2007DAA3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A93393C1AF656A2007DAA3F /* Build configuration list for PBXNativeTarget "ios-labTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +487,7 @@
 				5A93393E1AF656A2007DAA3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

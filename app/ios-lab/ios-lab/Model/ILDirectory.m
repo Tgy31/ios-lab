@@ -13,8 +13,6 @@
 
 @interface ILDirectory()
 
-@property (strong, nonatomic, readwrite) NSString *name;
-@property (strong, nonatomic, readwrite) NSString *path;
 @property (strong, nonatomic, readwrite) NSArray *tree;
 
 @end
@@ -38,9 +36,12 @@
 #pragma mark - Getters & Setters
 
 - (void)setPath:(NSString *)path {
-    _path = path;
-    self.name = [self extractNameFromPath:path];
+    [super setPath:path];
     self.tree = [self readTreeFromPath:path];
+}
+
+- (BOOL)isDirectory {
+    return YES;
 }
 
 #pragma mark - Helpers
@@ -49,10 +50,6 @@
     BOOL isDirectory = NO;
     [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory];
     return isDirectory;
-}
-
-- (NSString *)extractNameFromPath:(NSString *)path {
-    return [[path lastPathComponent] stringByDeletingPathExtension];
 }
 
 - (NSArray *)readTreeFromPath:(NSString *)path {
