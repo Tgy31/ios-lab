@@ -153,11 +153,13 @@
 
 - (void)openDirectory:(ILDirectory *)directory {
     ILDirectoryTableViewVC *destination = [ILDirectoryTableViewVC newWithDirectory:directory];
+    destination.title = [directory nameWithExtension:YES];
     [self.navigationController pushViewController:destination animated:YES];
 }
 
 - (void)openImagefile:(ILImageFile *)imageFile {
     ILImageVC *destination = [ILImageVC newWithImageFile:imageFile];
+    destination.title = [imageFile nameWithExtension:YES];
     [self.navigationController pushViewController:destination animated:YES];
 }
 
