@@ -26,19 +26,14 @@
 }
 
 - (id)initFromPath:(NSString *)path {
-    self = [super init];
+    self = [super initFromPath:path];
     if (self) {
-        self.path = path;
+        self.tree = [self readTreeFromPath:path];
     }
     return self;
 }
 
 #pragma mark - Getters & Setters
-
-- (void)setPath:(NSString *)path {
-    [super setPath:path];
-    self.tree = [self readTreeFromPath:path];
-}
 
 - (BOOL)isDirectory {
     return YES;
@@ -62,11 +57,9 @@
     
     NSMutableArray *tree = [[NSMutableArray alloc] init];
     NSString *fullPath = nil;
-    NSLog(@"%@", path);
     for (NSString *file in files) {
         fullPath = [self.path stringByAppendingPathComponent:file];
         if ([ILImageFile isImageFile:fullPath]) {
-            NSLog(@"%@", file);
             ILImageFile *imageFile = [ILImageFile imageFileFromPath:fullPath];
             [tree addObject:imageFile];
         } else if ([ILDirectory isDirectory:fullPath]) {

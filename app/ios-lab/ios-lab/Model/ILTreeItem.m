@@ -8,7 +8,24 @@
 
 #import "ILTreeItem.h"
 
+@interface ILTreeItem()
+
+@property (strong, nonatomic, readwrite) NSString *path;
+
+@end
+
 @implementation ILTreeItem
+
+#pragma mark - Constructors
+
+
+- (id)initFromPath:(NSString *)path {
+    self = [super init];
+    if (self) {
+        self.path = path;
+    }
+    return self;
+}
 
 #pragma mark - Getters
 

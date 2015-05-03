@@ -10,7 +10,9 @@
 
 @interface ILTreeItem : NSObject
 
-@property (strong, nonatomic) NSString *path;
+@property (strong, nonatomic, readonly) NSString *path;
+
+- (id)initFromPath:(NSString *)path;
 
 - (NSString *)nameWithExtension:(BOOL)extension;
 - (BOOL)isDirectory;

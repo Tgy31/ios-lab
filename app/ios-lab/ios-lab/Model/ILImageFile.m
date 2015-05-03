@@ -26,9 +26,8 @@
 }
 
 - (id)initFromPath:(NSString *)path {
-    self = [super init];
+    self = [super initFromPath:path];
     if (self) {
-        self.path = path;
     }
     return self;
 }
