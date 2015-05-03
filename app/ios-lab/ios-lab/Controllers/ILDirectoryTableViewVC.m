@@ -32,6 +32,7 @@
     if (self) {
         self.directory = directory;
         self.title = NSLocalizedString(@"DEFAULT_DIRECTORY_NAME", nil);
+        [self initializeRefreshControl];
     }
     return self;
 }
@@ -43,6 +44,13 @@
     [self.tableView reloadData];
 }
 
+- (void)initializeRefreshControl {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(shouldRefresh)
+                  forControlEvents:UIControlEventValueChanged];
+}
+
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
@@ -52,6 +60,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Handlers
+
+- (void)shouldRefresh {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.refreshControl endRefreshing];
+    });
 }
 
 #pragma mark - Table view data source
